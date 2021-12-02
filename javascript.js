@@ -10,25 +10,25 @@ var guessed_nums = [];
 function play(){
     var user_guess = document.getElementById("guess") .
     value;
-    if(user_guess < 1 || user_guess > 100){
+    if(user_guess < 1 || user_guess > 100 && no_of_guesses<=10){
         alert("Please enter a number between 1 and 100.");
     }
     else{
         guessed_nums.push(user_guess);
         no_of_guesses+= 1;
 
-        if(user_guess < answer){
+        if(user_guess < answer && no_of_guesses<=10){
             msg1.textContent = "Your guess is too low.";
             msg2.textContent ="No. of guesses:" + no_of_guesses;
             msg3.textContent ="Guessed numbers are:" + guessed_nums;
 
         }
-        else if(user_guess > answer){
+        else if(user_guess > answer && no_of_guesses<=10){
             msg1.textContent = "Your guess is too hight.";
             msg2.textContent ="No. of guesses:" + no_of_guesses;
             msg3.textContent ="Guessed numbers are:" + guessed_nums;
         }
-        else if(user_guess == answer){
+        else if(user_guess == answer && no_of_guesses<=10){
             msg1.textContent = "Bravoo You Win !!";
             msg2.textContent = "The number was:" + answer;
             msg3.textContent = "You guessed it in:" + no_of_guesses + " guesses";
