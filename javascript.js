@@ -55,25 +55,3 @@ function play(){
        
     }
 }
-        else if(user_guess > answer && no_of_guesses<=10){
-            msg1.textContent = "Your guess is too high.";
-            msg2.textContent = "No. of guesses: " + no_of_guesses;
-            msg3.textContent = "Guessed numbers are: " +
-            guessed_nums;
-        }
-        
-        else if(user_guess == answer){
-            msg1.textContent = "!! YOU Win !!";
-            msg2.textContent = "The number was: " + answer;
-            msg3.textContent = "You guessed it in "+ no_of_guesses + " guesses";
-            document.getElementById("my_btn").disabled = true;
-        }
-        else if (user_guess != answer){
-            msg1.textContent = "GAME OVER";
-            msg2.textContent = "";
-            msg3.textContent = " MAX NUMBER OF GUESSSES REACHED";
-
-        }
-       
-    }
-}
