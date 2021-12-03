@@ -16,7 +16,7 @@ function play(){
     else{
         guessed_nums.push(user_guess);
         no_of_guesses++;
-         
+    }
         
 
         if(user_guess < answer && no_of_guesses<=10){
